@@ -1,9 +1,12 @@
 package singleton;
 
-public class DBConnector {
+import java.io.Serializable;
+
+public class DBConnector implements Serializable {
     private static DBConnector con;
     private DBConnector(){
-        //  solution for reflection API
+        //  solution for 1.reflection API
+        //  another way can be making this class an Enum
         if(con!=null){
             throw new RuntimeException("You are trying to break singleton pattern");
         }
@@ -23,6 +26,11 @@ public class DBConnector {
             }
 
         }
+        return con;
+    }
+
+    //Solution for 2.Deserialization
+    public Object readResolve(){
         return con;
     }
 }
