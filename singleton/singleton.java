@@ -9,7 +9,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class Singleton {
-    public static void main (String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, RuntimeException, IOException, ClassNotFoundException {
+    public static void main (String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, RuntimeException, IOException, ClassNotFoundException, CloneNotSupportedException {
         DBConnector con1=DBConnector.get();
         System.out.println("con1: "+con1.hashCode());
 
@@ -44,7 +44,9 @@ public class Singleton {
         System.out.println("After deserialization con2: "+ deserilizedConObj.hashCode());
 
 
-
+        // 3.cloning
+        DBConnector cloneObj= (DBConnector) con2.clone();
+        System.out.println("After cloning con2: "+ cloneObj.hashCode());
 
 
     }

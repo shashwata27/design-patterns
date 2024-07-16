@@ -2,7 +2,7 @@ package singleton;
 
 import java.io.Serializable;
 
-public class DBConnector implements Serializable {
+public class DBConnector implements Serializable,Cloneable {
     private static DBConnector con;
     private DBConnector(){
         //  solution for 1.reflection API
@@ -33,4 +33,13 @@ public class DBConnector implements Serializable {
     public Object readResolve(){
         return con;
     }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+
+        //Solution for 2.Deserialization
+        // return con;
+    }
+
 }
