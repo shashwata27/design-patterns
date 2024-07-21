@@ -8,6 +8,14 @@ package absFactoryByInheritance;
 // viz ItalianPizzaFactory creates ItalianNeapolitan, ItalianChicken  pizza
 // 2. This lets a factory create a bunch of related objects which aren't same type but are distant relatives
 public abstract class PizzaStoreFactory {
+
+    public static PizzaStoreFactory getFactory(String type){
+        if (type.equalsIgnoreCase("NY")){
+            return new NYPizzaStoreFactory();
+        }
+        return null;
+    }
+
     public Pizza orderPizza(String type){
         Pizza pizza=createPizza(type);
 
