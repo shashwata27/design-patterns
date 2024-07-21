@@ -1,4 +1,4 @@
-package absFactoryByInheritance;
+package abs_factory_by_inheritance;
 
 public class NYCheeseHeavenPizza extends Pizza{
     @Override
