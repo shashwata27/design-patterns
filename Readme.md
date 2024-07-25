@@ -11,3 +11,4 @@
 - observer
 - strategy
 - command
+- adapter
