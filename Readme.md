@@ -1,14 +1,14 @@
 # Object Creational Design pattern
 
-- Singleton
-- factory
-- abstract factory
+- Singleton ✔️
+- factory ✔️
+- abstract factory ✔️
 - builder
 - prototype
 
 # Object Behavioral Design pattern
-- decorator
-- observer
-- strategy
-- command
+- decorator ✔️
+- observer ✔️
+- strategy ✔️
+- command ✔️
 - adapter
