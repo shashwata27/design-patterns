@@ -11,7 +11,7 @@
 - observer ✔️
 - strategy ✔️
 - command ✔️
-- adapter
 
 # Object Structural Design pattern: to refactor code
-- Facade
+- Facade ✔
+- adapter ✔
